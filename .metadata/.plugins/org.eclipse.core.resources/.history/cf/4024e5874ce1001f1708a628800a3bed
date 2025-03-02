@@ -1,0 +1,24 @@
+package transaction;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.Scanner;
+
+public class DBCon7 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		try(sc;){
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","advjava","advjava");
+			PreparedStatement ps1 = con.prepareStatement("select * from bank70 where accno = ?");
+			PreparedStatement ps2 = con.prepareStatement("update bank70 set balance = balance + ? where accno = ?");
+			System.out.println("Commit Status : "+con.getAutoCommit());
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}

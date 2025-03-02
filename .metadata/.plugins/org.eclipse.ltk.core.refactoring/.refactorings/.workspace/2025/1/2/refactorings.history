@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;JDBC_APP3&apos; to &apos;JDBC_APP3_Emp&apos;" description="Rename resource &apos;JDBC_APP3&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/JDBC_APP3" name="JDBC_APP3_Emp" stamp="1736327050630" updateReferences="true"/>
+</session>
